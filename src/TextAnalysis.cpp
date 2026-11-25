@@ -18,7 +18,7 @@ int countWords(const std::string &text) {
       imwort = false;
     }
   }
-  return wortanzahl;
+  return 0;
 }
 
 std::map<std::string, int>
