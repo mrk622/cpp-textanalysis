@@ -1,0 +1,7 @@
+# Build-Dateien
+build/
+*.o
+*.out
+
+# Kursunterlagen
+*.pdf
