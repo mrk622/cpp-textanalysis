@@ -1,0 +1,20 @@
+name: C++ CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Create build directory
+      run: mkdir -p build
+
+    - name: Compile unit tests
+      run: g++ -std=c++20 -Wall -Wextra -Wpedantic -Iinclude tests/test_TextAnalysis.cpp src/TextAnalysis.cpp -o build/test_textanalyse
+
+    - name: Run unit tests
+      run: ./build/test_textanalyse
